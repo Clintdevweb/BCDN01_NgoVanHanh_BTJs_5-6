@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Js Buổi 5-6</title>
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container my-5 py-5 ">
+
+        <div class="row">
+            <div class="col-10 mx-auto d-flex">
+                <!-- Menu bố cục -->
+                <div class="px-3 py-3 bt1_menu col-2">
+                    <ul class="nav nav-pills mb-3 d-block" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active text-center" id="pills-home-tab" data-toggle="pill"
+                                href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Bài tập
+                                1</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-profile-tab" data-toggle="pill"
+                                href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bài
+                                tập 2</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-contact-tab" data-toggle="pill"
+                                href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Bài
+                                tập 3</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt4-tab" data-toggle="pill"
+                                href="#pills-Bt4" role="tab" aria-controls="pills-contact" aria-selected="false">Bài
+                                tập 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu bố cục end -->
+
+                <div class="tab-content px-5 bt1_content col-10" id="pills-tabContent">
+                    <!-- Bài tập 1 -->
+                    <div class="tab-pane fade show py-3 active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <h4><span class="fas fa-school bt1_Icon mr-3"></span> Quản lý tuyển sinh</h4>
+                        <div class="row ">
+                            <div class="col-4 pt-3">
+                                <form action="">
+                                    <label for=""></label>
+                                    <input type="number" class="form-control" placeholder="Điểm chuẩn"
+                                        id="InputdiemChuan">
+                                </form>
+                            </div>
+                            <div class="col-4 pt-3 px-3 form-group">
+                                <form action="">
+                                    <label for=""></label>
+                                    <select id="InputkhuVuc" class="form-control">
+                                        <option value="0">Chọn khu vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-4 pt-3">
+                                <form action="">
+                                    <label for=""></label>
+                                    <select id="InputdoiTuong" class="form-control px-3">
+                                        <option value="0">Chọn đối tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                <form action="">
+                                    <label for=""></label>
+                                    <input type="number" class="form-control" placeholder="Điểm môn thứ 1"
+                                        id="diemMon1">
+                                </form>
+                            </div>
+                            <div class="col-4 px-3">
+                                <form action="">
+                                    <label for=""></label>
+                                    <input type="number" class="form-control" placeholder="Điểm môn thứ 2"
+                                        id="diemMon2">
+                                </form>
+                            </div>
+                            <div class="col-4 ">
+                                <form action="">
+                                    <label for=""></label>
+                                    <input type="number" class="form-control" placeholder="Điểm môn thứ 3"
+                                        id="diemMon3">
+                                </form>
+                            </div>
+                        </div>
+                        <button class="btn btn-success mt-3" id="btnResult" onclick="nguyenVong()" type="button">Kết
+                            quả</button>
+                        <div class="txtBt mt-5 py-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResult" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 1 End -->
+
+                    <!-- Bài tập 2 -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <h4 class="mt-3"><span class="fas fa-battery-three-quarters mr-3 bt2_Icon"></span>Tính tiền điện
+                        </h4>
+                        <div class="row mt-5">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="text" class="form-control" placeholder="Nhập họ và tên" id="NameCustomer">
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Nhập số Kw" id="inputKw">
+                                </form>
+                            </div>
+                        </div>
+                        <button class="btn btn-success mt-3" type="button" id="CalBtn_Bt2" onclick="tienDien ()">Tính tiền</button>
+                        <div class="txtBt mt-5 py-3 mb-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResult_Bt2" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 2 ENd -->
+                    <!-- Bài tập3 -->
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <h4 class="mt-3"><span class="fas fa-hand-holding-usd bt3_Icon"></span>
+                            Tính thuế thu nhập cá nhân
+                        </h4>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="text" class="form-control" placeholder="Nhập họ và tên" id="name2">
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Tổng thu nhập năm" id="inputIncome">
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Số người phụ thuộc" id="inputPeople">
+                                </form>
+                            </div>
+                        </div>
+                        <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt3">Tính tiền thuế</button>
+                        <div class="txtBt mt-5 py-3 mb-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResult_Bt3" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 3 End -->
+                    <!-- Bài tập 4 -->
+                    <div class="tab-pane fade" id="pills-Bt4" role="tabpanel" aria-labelledby="pills-Bt4-tab">
+                    <h4 class="mt-3"><span class="fas fa-wifi mr-3 bt4_Icon"></span>Tính tiền cáp</h4>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <form action="">
+                                <select name="" id="typeCustom" class="form-control" onchange="myFunction()">
+                                    <option value="">Chọn loại khách hàng</option>
+                                    <option value="nhaDan">Nhà dân</option>
+                                    <option value="doanhNghiep">Doanh nghiệp</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-4">
+                            <form action="">
+                                <input type="text" class="form-control" placeholder="Nhập mã khách hàng" id="inputCode">
+                            </form>
+                        </div>
+                        <div class="col-4">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Số kênh cao cấp" id="inputChannel">
+                            </form>
+                        </div>
+                        <div class="col-4 mt-3 " id="Connect">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Số kết nối" id="inputConnect">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt4">Tính tiền cáp</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt4" class=""></p>
+                        </span>
+                    </div>
+                    <!-- Bài tập 4 ENd -->
+                    </div>
+                    <!-- Bài tập 4 END -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="./js/bt1.js"></script>
+    <script src="./js/bt2.js"></script>
+    <script src="./js/bt3.js"></script>
+    <script src="./js/bt4.js"></script>
+    <script>
+        function myFunction() {
+    var changeOb = document.getElementById('typeCustom').value;
+    if(changeOb === 'doanhNghiep'){
+        document.getElementById("Connect").style.display = "block";
+    }else{
+        document.getElementById("Connect").style.display = "none";
+    }
+    }
+    </script>
+</body>
+
+</html>

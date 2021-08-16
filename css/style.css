@@ -1,0 +1,67 @@
+html, body{
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+  
+/* Css Bt1 */
+.bt1_Icon{
+    color: salmon;
+}
+.bt1_content{
+    background: rgb(197, 250, 217, 0.5);
+    border-radius: 0 5px 5px 0;
+}
+.bt1_menu{
+    background: rgb(197, 250, 217, 0.8);
+    border-radius: 5px 0 0 5px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgba(65, 146, 96, 0.8);
+}
+.txtBt{
+    background: rgba(170, 228, 184, 0.8);
+    border-radius: 10px;
+}
+.txtBt span{
+    color: rgba(127, 188, 245, 0.8);
+    font-size: 30px;
+    padding-left: 10px; 
+    align-items: center;
+    
+}
+.txtBt span p{
+    color: rgb(238, 160, 104);
+    padding-left: 20px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+/* Css Bt2 */
+
+.bt2_Icon{
+    color: rgb(217, 243, 71);
+}
+/* Css Bt3 */
+.bt3_Icon{
+    color: rgb(253, 133, 133);
+}
+/* Css Bt4 */
+.bt4_Icon{
+    color: rgb(247, 67, 67);
+}
+/* Create event onchange */
+#Connect{
+    display: none;
+}
